@@ -1,4 +1,10 @@
+#lang racket
 (require rackunit rackunit/text-ui)
+
+(define (factorial x)
+  (if (= x 0)
+    1
+    (* x (factorial (- x 1)))))
 
 (define factorial-tests
   (test-suite

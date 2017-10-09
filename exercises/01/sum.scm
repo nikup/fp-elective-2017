@@ -1,4 +1,10 @@
+#lang racket
 (require rackunit rackunit/text-ui)
+
+(define (sum a b)
+  (if (= a b)
+      a
+      (+ a (sum (+ a 1) b))))
 
 (define sum-tests
   (test-suite

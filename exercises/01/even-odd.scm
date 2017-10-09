@@ -1,4 +1,8 @@
+#lang racket
 (require rackunit rackunit/text-ui)
+
+(define (even? a) (= 0 (remainder a 2)))
+(define (odd? a) (not (even? a)))
 
 (define even-odd-tests
   (test-suite

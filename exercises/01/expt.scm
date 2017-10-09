@@ -1,4 +1,10 @@
+#lang racket
 (require rackunit rackunit/text-ui)
+
+(define (expt a b)
+  (cond ((= b 0) 1)
+      ((= b 1) a)
+      (else (* a (expt a (- b 1))))))
 
 (define expt-tests
   (test-suite
