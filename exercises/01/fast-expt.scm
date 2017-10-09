@@ -11,6 +11,6 @@
    (check = (fast-expt 5 3) 125)
    (check = (fast-expt 2 10) 1024)
    (check = (fast-expt -2 10) 1024)
-   (check = (fast-expt -2 11) 2048)))
+   (check = (fast-expt -2 11) -2048)))
 
 (run-tests fast-expt-tests)
