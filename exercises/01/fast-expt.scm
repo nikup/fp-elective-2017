@@ -1,5 +1,14 @@
 (require rackunit rackunit/text-ui)
 
+(define (fast-expt base exp)
+  (cond ((= exp 0) 1)
+        ((even? exp)
+          (* (fast-expt base (/ exp 2))
+             (fast-expt base (/ exp 2))))
+        ((odd? exp)
+          (* base
+             (fast-expt base (- exp 1))))))
+
 (define fast-expt-tests
   (test-suite
    "Tests for fast-expt"
